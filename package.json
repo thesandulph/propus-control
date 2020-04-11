@@ -1,0 +1,62 @@
+{
+    "name": "@reatc/control",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "description": "Propus scope packages!",
+    "author": "The Sandulph",
+    "license": "MIT",
+    "homepage": "https://github.com/thesandulph/propus-control#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thesandulph/propus-control.git"
+    },
+    "bugs": {
+        "url": "https://github.com/thesandulph/propus-control/issues"
+    },
+    "keywords": [
+        "phantom"
+    ],
+    "pre-commit": [
+        "lint"
+    ],
+    "scripts": {
+        "prerefresh": "rimraf dist node_modules yarn.lock package-lock.json",
+        "refresh": "yarn install",
+        "clean": "rimraf dist",
+        "lint": "echo \"LINITING comming soon!\"",
+        "prebuild": "yarn clean",
+        "build": "yarn rollup -c",
+        "prepublishOnly": "yarn lint && yarn build"
+    },
+    "dependencies": {
+        "@reatc/utility": "^0.0.46",
+        "change-case": "^4.1.1",
+        "prop-types": "^15.7.2",
+        "react": "^16.12.0",
+        "react-helmet": "^5.2.1",
+        "react-intl": "^3.12.0",
+        "react-redux": "^7.1.3",
+        "react-router": "^5.1.2",
+        "react-router-dom": "^5.1.2",
+        "react-router-hash-link": "^1.2.2",
+        "redux": "^4.0.5",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-thunk": "^2.3.0",
+        "smoothscroll-polyfill": "^0.4.4",
+        "ua-parser-js": "^0.7.21"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.7.0",
+        "@babel/core": "^7.7.2",
+        "@babel/plugin-proposal-class-properties": "^7.7.4",
+        "@babel/preset-env": "^7.7.4",
+        "@babel/preset-react": "^7.7.1",
+        "@rollup/plugin-commonjs": "^11.0.1",
+        "@rollup/plugin-node-resolve": "^7.0.0",
+        "pre-commit": "^1.2.2",
+        "rimraf": "^3.0.0",
+        "rollup": "^1.27.5",
+        "rollup-plugin-babel": "^4.3.3"
+    }
+}
