@@ -1,6 +1,6 @@
 {
-    "name": "@reatc/control",
-    "version": "0.0.1",
+    "name": "@propus/control",
+    "version": "0.0.2",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "description": "Propus coming soon...",
@@ -30,7 +30,7 @@
         "prepublishOnly": "yarn lint && yarn build"
     },
     "dependencies": {
-        "@propus/utility": "^0.0.5",
+        "@propus/utility": "^0.0.6",
         "prop-types": "^15.7.2",
         "react": "^16.13.1"
     },
