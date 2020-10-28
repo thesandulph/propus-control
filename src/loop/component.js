@@ -1,47 +1,37 @@
-import React from 'react';
+import React, {Children, cloneElement} from 'react';
 import PropTypes from 'prop-types';
-import {
-    isArray,
-    isObject,
-    isValued,
-    run,
-} from '@propus/utility';
-import {keyExtractor} from './utility';
+import {toObject, toArray} from '@propus/utility';
+import {keyExtractor as extractor} from './utility';
 
-const Loop = ({label, data, component: Component, wrapper: Wrapper}) => {
-    if (isValued(label)) {
-        const is_array_data = isArray(data);
-        const is_object_data = isObject(data);
-        if (is_array_data || is_object_data) {
-            const iterative_data = is_array_data ? data : Object.keys(data);
-            return iterative_data.map((key, index) => {
-                const subject = is_array_data ? index : key;
-                const item = is_array_data ? key : data[key];
-                return (
-                    <Component
-                        index={index}
-                        subject={subject}
-                        item={item}
-                        key={keyExtractor(subject, index, run(label, item))}
-                    />
-                );
-            });
-        }
+const Loop = ({data, keyExtractor, children}) => {
+    const object = toObject(data);
+    if (children) {
+        return Object.keys(object).map((value, index) => {
+            const item = object[value];
+            const extracted = keyExtractor(item, value, index);
+            return cloneElement(Children.only(children), {
+                ...children.props,
+                index,
+                item,
+                subject: value,
+                key: extractor(toArray(extracted)),
+            })
+        });
     }
     return null;
 };
 
 Loop.propTypes = {
-    label: PropTypes.any.isRequired,
+    children: PropTypes.node,
+    keyExtractor: PropTypes.func.isRequired,
     data: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array,
     ]).isRequired,
-    component: PropTypes.func.isRequired,
 };
 
 Loop.defaultProps = {
-    keyExtractor: () => null,
+    children: null,
 };
 
 export default Loop;

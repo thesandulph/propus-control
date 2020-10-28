@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {run} from '@propus/utility';
 import {when} from './utility';
 
-const When = ({condition, render, children, unless}) => {
+const When = ({condition, children, unless}) => {
     if (when(condition, unless)) {
-        return children || run(render);
+        return children;
     }
     return null;
 };
@@ -13,14 +12,12 @@ const When = ({condition, render, children, unless}) => {
 When.propTypes = {
     condition: PropTypes.any,
     unless: PropTypes.bool,
-    render: PropTypes.func,
     children: PropTypes.node,
 };
 
 When.defaultProps = {
     condition: null,
     unless: false,
-    render: null,
     children: null,
 };
 

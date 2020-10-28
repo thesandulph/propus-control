@@ -1,2 +1,2 @@
 export const keyExtractor = (...params) =>
-    ['propus', 'control', 'loop', ...params].flat().filter(Boolean).join('-');
+    ['propus', 'loop', ...params].filter(Boolean).join('-');
