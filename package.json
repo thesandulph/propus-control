@@ -30,7 +30,7 @@
         "prepublishOnly": "yarn lint && yarn build"
     },
     "dependencies": {
-        "@propus/utility": "^0.0.6",
+        "@propus/utility": "^0.0.7",
         "prop-types": "^15.7.2",
         "react": "^16.13.1"
     },

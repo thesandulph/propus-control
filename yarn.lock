@@ -933,10 +933,10 @@
   dependencies:
     chokidar "2.1.8"
 
-"@propus/utility@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@propus/utility/-/utility-0.0.6.tgz#4faa7941c014676ed8ff96c759d66b3b3ce00bb8"
-  integrity sha512-pKI8YnZWSnk7hZNk7qJczpE6RbHqebGgILbz53Llhlm7Ypf2C2tbu2NvQzKLMOxM0qhqIVsl7LENJdNzalHNUQ==
+"@propus/utility@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@propus/utility/-/utility-0.0.7.tgz#39df1617270ee95436584f75b02e6800e29b2ad4"
+  integrity sha512-PZ4pgkDYjegWb/rovIbrxiuFRPVb3UFxFOms4lSDZobKDty/pJHoILdx58PcsUA+RmyDW0OJOG2u1MWd9Yrw4w==
   dependencies:
     change-case "^4.1.1"
     fast-deep-equal "^3.1.1"
@@ -944,6 +944,7 @@
     is-valid-path "^0.1.1"
     query-string "^6.11.1"
     store "^2.0.12"
+    uuid "^8.3.0"
 
 "@rollup/plugin-commonjs@^11.0.1":
   version "11.1.0"
@@ -2742,6 +2743,11 @@ util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+
+uuid@^8.3.0:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.1.tgz#2ba2e6ca000da60fce5a196954ab241131e05a31"
+  integrity sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg==
 
 which@1.2.x:
   version "1.2.14"
