@@ -21,30 +21,33 @@
         "lint"
     ],
     "scripts": {
-        "prerefresh": "rimraf dist node_modules yarn.lock package-lock.json",
-        "refresh": "yarn install",
-        "clean": "rimraf dist",
         "lint": "echo \"LINITING comming soon!\"",
-        "prebuild": "yarn clean",
+        "clean": "rimraf dist node_modules package-lock.json yarn.lock",
+        "postclean": "yarn cache clean",
+        "prerefresh": "yarn clean",
+        "refresh": "yarn install",
+        "prebuild": "yarn lint",
         "build": "yarn rollup -c",
-        "prepublishOnly": "yarn lint && yarn build"
+        "prebuild:publish": "yarn refresh",
+        "build:publish": "yarn build",
+        "prepublishOnly": "yarn build:publish"
     },
     "dependencies": {
-        "@propus/utility": "^0.0.7",
+        "@propus/utility": "^0.0.8",
         "prop-types": "^15.7.2",
-        "react": "^16.13.1"
+        "react": "^17.0.1"
     },
     "devDependencies": {
-        "@babel/cli": "^7.7.0",
-        "@babel/core": "^7.7.2",
-        "@babel/plugin-proposal-class-properties": "^7.7.4",
-        "@babel/preset-env": "^7.7.4",
-        "@babel/preset-react": "^7.7.1",
-        "@rollup/plugin-commonjs": "^11.0.1",
-        "@rollup/plugin-node-resolve": "^7.0.0",
+        "@babel/cli": "^7.12.10",
+        "@babel/core": "^7.12.10",
+        "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/preset-react": "^7.12.10",
+        "@rollup/plugin-commonjs": "^17.0.0",
+        "@rollup/plugin-node-resolve": "^11.0.1",
         "pre-commit": "^1.2.2",
-        "rimraf": "^3.0.0",
-        "rollup": "^1.27.5",
-        "rollup-plugin-babel": "^4.3.3"
+        "rimraf": "^3.0.2",
+        "rollup": "^2.35.1",
+        "rollup-plugin-babel": "^4.4.0"
     }
 }
