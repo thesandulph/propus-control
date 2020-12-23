@@ -1,4 +1,4 @@
-import React, {Children, cloneElement} from 'react';
+import {Children, cloneElement} from 'react';
 import PropTypes from 'prop-types';
 import {toObject, toArray} from '@propus/utility';
 import {keyExtractor as extractor} from './utility';
