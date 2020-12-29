@@ -1,6 +1,6 @@
 {
     "name": "@propus/control",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "description": "Propus coming soon...",
@@ -21,7 +21,7 @@
         "lint"
     ],
     "scripts": {
-        "lint": "echo \"LINITING comming soon!\"",
+        "lint": "echo \"LINTING comming soon!\"",
         "clean": "rimraf dist node_modules package-lock.json yarn.lock",
         "postclean": "yarn cache clean",
         "prerefresh": "yarn clean",
@@ -33,7 +33,7 @@
         "prepublishOnly": "yarn build:publish"
     },
     "dependencies": {
-        "@propus/utility": "^0.0.8",
+        "@propus/utility": "^0.0.10",
         "prop-types": "^15.7.2",
         "react": "^17.0.1"
     },
@@ -41,6 +41,7 @@
         "@babel/cli": "^7.12.10",
         "@babel/core": "^7.12.10",
         "@babel/plugin-proposal-class-properties": "^7.12.1",
+        "@babel/plugin-proposal-export-default-from": "^7.12.1",
         "@babel/preset-env": "^7.12.11",
         "@babel/preset-react": "^7.12.10",
         "@rollup/plugin-commonjs": "^17.0.0",
