@@ -1,11 +1,11 @@
 import {Children, cloneElement} from 'react';
 import PropTypes from 'prop-types';
 import {toObject, toArray} from '@propus/utility';
-import {keyExtractor as extractor} from './utility';
+import {keyExtractor as extractor} from './utils/key-extractor';
 
 const Loop = ({data, keyExtractor, children}) => {
-    const object = toObject(data);
     if (children) {
+        const object = toObject(data);
         return Object.keys(object).map((value, index) => {
             const item = object[value];
             const extracted = keyExtractor(item, value, index);

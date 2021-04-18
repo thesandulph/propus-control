@@ -1,7 +1,7 @@
 import {Children} from 'react';
 import PropTypes from 'prop-types';
-import {Case} from '../case';
-import {when} from '../when/utility';
+import {when} from './utils';
+import Case from './Case';
 
 const Switch = ({value, children}) => {
     let iterative = true;

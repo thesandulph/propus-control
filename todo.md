@@ -4,3 +4,4 @@
 4. Write documentation
 5. Complete package info
 6. Add dictionary file
+7. Memoize components

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {when} from './utility';
+import {when} from './utils';
 
 const When = ({condition, children, unless}) => {
     if (when(condition, unless)) {
